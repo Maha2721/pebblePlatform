@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pebble Platform — Shape + Grip Family</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <span class="nav-logi">Logitech</span>
+      <span class="nav-sep">|</span>
+      <span class="nav-project">Pebble Platform</span>
+    </div>
+    <div class="nav-links">
+      <a href="#why">Why</a>
+      <a href="#needs">Needs</a>
+      <a href="#configurator">Configurator</a>
+      <a href="#howto">How to Print</a>
+    </div>
+    <div class="nav-family-badge">Family 1 — Shape + Grip</div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="family-tag">
+        <span class="family-num">01</span>
+        Module Family
+      </div>
+      <h1>Shape + <span class="accent">Grip</span></h1>
+      <p class="hero-sub">The Pebble mouse is designed for the average hand. Your hand is not average. This family of add-ons adapts the shape, grip width, posture support, and tactile feedback of the Pebble to fit <em>you</em> — without modifying the electronics inside.</p>
+      <div class="hero-tags">
+        <span>Shape</span>
+        <span>Support</span>
+        <span>Posture</span>
+        <span>Fatigue</span>
+        <span>Tactile Markers</span>
+      </div>
+      <a href="#configurator" class="btn-hero">Configure My Mouse →</a>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-mouse-wrap">
+        <canvas id="heroCanvas"></canvas>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY SECTION -->
+<section class="why-section" id="why">
+  <div class="container">
+    <div class="section-tag">The Problem</div>
+    <h2>One shape does not fit everyone.</h2>
+    <p class="section-sub">The standard Pebble is designed for a medium-sized right hand in a palm grip. If your hand is larger, smaller, or if you prefer a claw or fingertip grip — the mouse is working against you. Over hours of use, the wrong shape causes fatigue, pain, and loss of precision.</p>
+
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="problem-icon">✋</div>
+        <h3>Hand Size Mismatch</h3>
+        <p>Large hands hang off the sides. Small hands can't reach the scroll wheel comfortably. Neither is the user's fault.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">😣</div>
+        <h3>Grip Style Ignored</h3>
+        <p>Claw grip users need less height. Fingertip grip users need narrower bodies. Palm grip users need rear extension. The standard shape serves none of them well.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">🧠</div>
+        <h3>Tactile Orientation Loss</h3>
+        <p>Users with low vision or motor conditions rely on tactile landmarks to position their fingers correctly. A smooth uniform surface gives them nothing.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">⏱️</div>
+        <h3>Fatigue Over Time</h3>
+        <p>Without support at the right points — thumb shelf, wrist rest, palm pad — extended use causes cumulative strain that builds up across workdays.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 NEEDS -->
+<section class="needs-section" id="needs">
+  <div class="container">
+    <div class="section-tag">What Shape + Grip Solves</div>
+    <h2>Five needs. One family.</h2>
+    <p class="section-sub">Every module in this family addresses one of five functional needs identified from user research with people who have difficulty using standard mice.</p>
+
+    <div class="needs-grid">
+      <div class="need-card active" data-need="shape">
+        <div class="need-number">01</div>
+        <h3>Shape</h3>
+        <p>Different outer shell profiles — sculpted palm rest, wide body, finger-guided surface — for different hand sizes and grip styles.</p>
+        <div class="need-modules">Modules: Standard Shell · Sculpted Palm · Finger Guide · Wide Body</div>
+      </div>
+      <div class="need-card" data-need="support">
+        <div class="need-number">02</div>
+        <h3>Support</h3>
+        <p>Wrist rest and palm pad attachments that provide a resting surface and reduce the effort of hovering the hand above the desk.</p>
+        <div class="need-modules">Modules: No Support · Flat Wrist Rest · Angled Palm Pad</div>
+      </div>
+      <div class="need-card" data-need="posture">
+        <div class="need-number">03</div>
+        <h3>Posture</h3>
+        <p>Grip panels that change the effective width of the mouse, shifting hand posture and reducing ulnar deviation and wrist pronation.</p>
+        <div class="need-modules">Modules: Slim (3mm) · Standard (7mm) · Wide (14mm) · Ergonomic Contour</div>
+      </div>
+      <div class="need-card" data-need="fatigue">
+        <div class="need-number">04</div>
+        <h3>Fatigue</h3>
+        <p>High-grip surfaces that reduce the grip force needed to control the mouse — allowing lighter contact and less muscular effort over time.</p>
+        <div class="need-modules">Modules: Smooth · Textured TPU · High-Grip Dots · Soft-Touch Foam</div>
+      </div>
+      <div class="need-card" data-need="tactile">
+        <div class="need-number">05</div>
+        <h3>Tactile Markers</h3>
+        <p>Raised dots, grooves, and finger position indicators that help users orient their hand without looking at the mouse.</p>
+        <div class="need-modules">Modules: None · Button Dot · Finger Grooves · Full Orientation Set</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONFIGURATOR -->
+<section class="configurator-section" id="configurator">
+  <div class="configurator-inner">
+
+    <!-- LEFT: OPTIONS -->
+    <aside class="config-sidebar">
+      <div class="config-header">
+        <h2>Configure Your Mouse</h2>
+        <p>Select one option per category. The 3D preview updates live.</p>
+      </div>
+
+      <!-- SHELL SHAPE -->
+      <div class="config-group">
+        <div class="config-group-label">
+          <span class="config-num">01</span>
+          <span>Shell Shape</span>
+        </div>
+        <div class="config-options">
+          <label class="config-option">
+            <input type="radio" name="shell" value="standard" checked/>
+            <div class="config-card">
+              <div class="config-card-top">
+                <span class="config-name">Standard Shell</span>
+                <span class="config-badge">+0g</span>
+              </div>
+              <span class="config-desc">Original Pebble profile — baseline</span>
+            </div>
+          </label>
+          <label class="config-option">
+            <input type="radio" name="shell" value="sculpted"/>
+            <div class="config-card">
+              <div class="config-card-top">
+                <span class="config-name">Sculpted Palm</span>
+                <span class="config-badge">+22g</span>
+              </div>
+              <span class="config-desc">Deeper curved rear for palm grip</span>
+            </div>
+          </label>
+          <label class="config-option">
+            <input type="radio" name="shell" value="fingerguide"/>
+            <div class="config-card">
+              <div class="config-card-top">
+                <span class="config-name">Finger Guide</span>
+                <span class="config-badge">+18g</span>
+              </div>
+              <span class="config-desc">Raised ridges for finger positioning</span>
+            </div>
+          </label>
+          <label class="config-option">
+            <input type="radio" name="shell" value="wide"/>
+            <div class="config-card">
+              <div class="config-card-top">
+                <span class="config-name">Wide Body</span>
+                <span class="config-badge">+35g</span>
+              </div>
+              <span class="config-desc">Extended width for large hands</span>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- GRIP WIDTH -->
+      <div class="config-group">
+        <div class="config-group-label">
+          <span class="config-num">02</span>
+          <span>Grip Width</span>
+        </div>
+        <div class="config-options">
+          <label class="config-option">
+            <input type="radio" name="grip" value="slim" />
+            <div class="config-card">
+              <div class="config-card-top">
+                <span class="config-name">Slim (3mm)</span>
+                <span class="config-badge">+6g</span>
+              </div>
+              <span class="config-desc">Small hands · travel · claw grip</span>
+            </div>
+          </label>
+          <label class="config-option">
+            <input type="radio" name="grip" value="standard" checked/>
+            <div class="config-card">
+              <div class="config-card-top">
+                <span class="config-name">Standard (7mm)</span>
+                <span class="config-badge">+0g</span>
+              </div>
+              <span class="config-desc">Default width — medium hands</span>
+            </div>
+          </label>
+          <label class="config-option">
+            <input type="radio" name="grip" value="wide"/>
+            <div class="config-card">
+              <div class="config-card-top">
+                <span class="config-name">Wide (14mm)</span>
+                <span class="config-badge">+32g</span>
+              </div>
+              <span class="config-desc">Large hands · palm grip</span>
+            </div>
+          </label>
+          <label class="config-option">
+            <input type="radio" name="grip" value="thumb"/>
+            <div class="config-card">
+              <div class="config-card-top">
+                <span class="config-name">Thumb Shelf</span>
+                <span class="config-badge">+28g</span>
+              </div>
+              <span class="config-desc">Ergonomic thumb rest built in</span>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- GRIP TEXTURE -->
+      <div class="config-group">
+        <div class="config-group-label">
+          <span class="config-num">03</span>
+          <span>Grip Texture</span>
+        </div>
+        <div class="config-options texture-row">
+          <label class="config-option">
+            <input type="radio" name="texture" value="smooth" checked/>
+            <div class="config-card compact">
+              <span class="config-name">Smooth</span>
+            </div>
+          </label>
+          <label class="config-option">
+            <input type="radio" name="texture" value="dots"/>
+            <div class="config-card compact">
+              <span class="config-name">Grip Dots</span>
+            </div>
+          </label>
+          <label class="config-option">
+            <input type="radio" name="texture" value="tpu"/>
+            <div class="config-card compact">
+              <span class="config-name">Soft TPU</span>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- SUPPORT -->
+      <div class="config-group">
+        <div class="config-group-label">
+          <span class="config-num">04</span>
+          <span>Wrist / Palm Support</span>
+        </div>
+        <div class="config-options">
+          <label class="config-option">
+            <input type="radio" name="support" value="none" checked/>
+            <div class="config-card">
+              <div class="config-card-top">
+                <span class="config-name">No Support</span>
+                <span class="config-badge">+0g</span>
+              </div>
+              <span class="config-desc">Standard use</span>
+            </div>
+          </label>
+          <label class="config-option">
+            <input type="radio" name="support" value="wrist"/>
+            <div class="config-card">
+              <div class="config-card-top">
+                <span class="config-name">Flat Wrist Rest</span>
+                <span class="config-badge">+45g</span>
+              </div>
+              <span class="config-desc">Reduces wrist hover fatigue</span>
+            </div>
+          </label>
+          <label class="config-option">
+            <input type="radio" name="support" value="palm"/>
+            <div class="config-card">
+              <div class="config-card-top">
+                <span class="config-name">Angled Palm Pad</span>
+                <span class="config-badge">+52g</span>
+              </div>
+              <span class="config-desc">15° angle, reduces pronation</span>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- TACTILE -->
+      <div class="config-group">
+        <div class="config-group-label">
+          <span class="config-num">05</span>
+          <span>Tactile Markers</span>
+        </div>
+        <div class="config-options texture-row">
+          <label class="config-option">
+            <input type="radio" name="tactile" value="none" checked/>
+            <div class="config-card compact">
+              <span class="config-name">None</span>
+            </div>
+          </label>
+          <label class="config-option">
+            <input type="radio" name="tactile" value="dot"/>
+            <div class="config-card compact">
+              <span class="config-name">Button Dot</span>
+            </div>
+          </label>
+          <label class="config-option">
+            <input type="radio" name="tactile" value="grooves"/>
+            <div class="config-card compact">
+              <span class="config-name">Finger Grooves</span>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- COLOR -->
+      <div class="config-group">
+        <div class="config-group-label">
+          <span class="config-num">06</span>
+          <span>Color</span>
+        </div>
+        <div class="color-grid">
+          <button class="cswatch active" data-color="#E8E0D5" data-name="Off White" style="background:#E8E0D5"></button>
+          <button class="cswatch" data-color="#2C3E50" data-name="Graphite" style="background:#2C3E50"></button>
+          <button class="cswatch" data-color="#E74C3C" data-name="Rose Red" style="background:#E74C3C"></button>
+          <button class="cswatch" data-color="#27AE60" data-name="Forest" style="background:#27AE60"></button>
+          <button class="cswatch" data-color="#2980B9" data-name="Ocean" style="background:#2980B9"></button>
+          <button class="cswatch" data-color="#FF8C00" data-name="Amber" style="background:#FF8C00"></button>
+          <button class="cswatch" data-color="#8E44AD" data-name="Plum" style="background:#8E44AD"></button>
+          <button class="cswatch" data-color="#111111" data-name="Matte Black" style="background:#111111"></button>
+        </div>
+        <p class="color-name-label">Color: <span id="colorLabel">Off White</span></p>
+      </div>
+
+    </aside>
+
+    <!-- CENTER: 3D VIEWER -->
+    <div class="config-viewer">
+      <div class="viewer-controls">
+        <button class="view-btn active" data-view="perspective">3D</button>
+        <button class="view-btn" data-view="top">Top</button>
+        <button class="view-btn" data-view="front">Front</button>
+        <button class="view-btn" data-view="side">Side</button>
+      </div>
+      <canvas id="mainCanvas"></canvas>
+      <p class="viewer-hint">Drag to rotate · Scroll to zoom</p>
+    </div>
+
+    <!-- RIGHT: SUMMARY -->
+    <aside class="config-summary">
+      <h3 class="summary-title">Your Configuration</h3>
+
+      <div class="summary-block">
+        <div class="summary-row">
+          <span class="summary-label">Shell</span>
+          <span class="summary-value" id="sumShell">Standard Shell</span>
+        </div>
+        <div class="summary-row">
+          <span class="summary-label">Grip Width</span>
+          <span class="summary-value" id="sumGrip">Standard 7mm</span>
+        </div>
+        <div class="summary-row">
+          <span class="summary-label">Texture</span>
+          <span class="summary-value" id="sumTexture">Smooth</span>
+        </div>
+        <div class="summary-row">
+          <span class="summary-label">Support</span>
+          <span class="summary-value" id="sumSupport">None</span>
+        </div>
+        <div class="summary-row">
+          <span class="summary-label">Tactile</span>
+          <span class="summary-value" id="sumTactile">None</span>
+        </div>
+        <div class="summary-row">
+          <span class="summary-label">Color</span>
+          <span class="summary-value" id="sumColor">Off White</span>
+        </div>
+      </div>
+
+      <div class="weight-block">
+        <div class="weight-row">
+          <span class="weight-label">Total Weight</span>
+          <span class="weight-val"><span id="weightNum">99</span>g</span>
+        </div>
+        <div class="weight-track">
+          <div class="weight-fill" id="weightFill"></div>
+        </div>
+        <div class="weight-minmax">
+          <span>Light 65g</span><span>Heavy 220g</span>
+        </div>
+      </div>
+
+      <div class="suitability-block">
+        <h4 class="block-label">Best For</h4>
+        <div class="suitability-tags" id="suitTags"></div>
+      </div>
+
+      <div class="print-block">
+        <h4 class="block-label">Print Estimate</h4>
+        <div class="print-row"><span>Material</span><span id="printMat">PETG</span></div>
+        <div class="print-row"><span>Print Time</span><span id="printTime">2h 30min</span></div>
+        <div class="print-row"><span>Material Use</span><span id="printGrams">28g</span></div>
+        <div class="print-row"><span>Difficulty</span><span id="printDiff">Easy</span></div>
+      </div>
+
+      <div class="action-block">
+        <button class="btn-download" id="downloadBtn">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          Download STL Package
+        </button>
+        <button class="btn-share" id="shareBtn">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+          Share Configuration
+        </button>
+        <p class="action-note">STL files include print settings pre-configured for 0.2mm layer height in PETG.</p>
+      </div>
+
+      <div class="community-block">
+        <h4 class="block-label">Community Designs</h4>
+        <div class="community-item">
+          <div class="comm-dot"></div>
+          <div>
+            <div class="comm-name">XL Palm Shell v2</div>
+            <div class="comm-meta">by maker_studio · 847 downloads</div>
+          </div>
+        </div>
+        <div class="community-item">
+          <div class="comm-dot"></div>
+          <div>
+            <div class="comm-name">Ergonomic Thumb Wrap</div>
+            <div class="comm-meta">by grip_lab · 1,203 downloads</div>
+          </div>
+        </div>
+        <div class="community-item">
+          <div class="comm-dot"></div>
+          <div>
+            <div class="comm-name">Left Hand Wide Body</div>
+            <div class="comm-meta">by lefty_designs · 562 downloads</div>
+          </div>
+        </div>
+        <a href="#" class="browse-link">Browse all Shape + Grip designs →</a>
+      </div>
+
+    </aside>
+  </div>
+</section>
+
+<!-- HOW TO PRINT -->
+<section class="howto-section" id="howto">
+  <div class="container">
+    <div class="section-tag">Getting Your Module</div>
+    <h2>From configuration to your hand in 4 steps.</h2>
+    <div class="howto-grid">
+      <div class="howto-step">
+        <div class="howto-num">01</div>
+        <h3>Configure</h3>
+        <p>Use the configurator above to select your shell shape, grip width, texture, support, and tactile markers. The 3D preview shows exactly what you will receive.</p>
+      </div>
+      <div class="howto-step">
+        <div class="howto-num">02</div>
+        <h3>Download</h3>
+        <p>Download your STL package. It includes all the files for your configuration with print settings pre-embedded in the .3mf file.</p>
+      </div>
+      <div class="howto-step">
+        <div class="howto-num">03</div>
+        <h3>Print or Order</h3>
+        <p>Print at home if you have a printer, or upload to a service like Craftcloud, Shapeways, or a local print shop. PETG recommended. ~2–4 hours.</p>
+      </div>
+      <div class="howto-step">
+        <div class="howto-num">04</div>
+        <h3>Attach</h3>
+        <p>Snap the top case onto the magnetic plate. Slide grip panels onto the side rails. No tools needed. The mouse works immediately.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <div class="footer-logo">Logitech · Pebble Platform</div>
+      <p>Family 1 of 5 — Shape + Grip</p>
+    </div>
+    <div class="footer-links">
+      <a href="#">Family 2: Weight + Stability</a>
+      <a href="#">Family 3: Click + Drag</a>
+      <a href="#">Family 4: Accessible Scroll</a>
+      <a href="#">Family 5: Alternative Control</a>
+    </div>
+    <div class="footer-right">
+      <p>Design your own add-on →</p>
+      <a href="#" class="footer-cta">Download Creator Toolkit</a>
+    </div>
+  </div>
+</footer>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
